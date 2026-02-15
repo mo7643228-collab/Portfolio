@@ -1,0 +1,46 @@
+[00:00:01.199] Server  LOG     ✓ Ready in 793ms
+[00:00:04.040] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:53.318] Server  LOG     ✓ Compiled in 493ms
+[00:01:13.132] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:58.673] Server  LOG     ✓ Compiled in 180ms
+[00:05:58.669] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:58.832] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+      <RedirectBoundary>
+        <RedirectErrorBoundary router={{...}}>
+          <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
+            <SegmentViewNode type="page" pagePath="page.tsx">
+              <SegmentTrieNode>
+              <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+                <Home params={Promise} searchParams={Promise}>
+                  <div className="min-h-scre...">
+                    <Navbar>
+                    <main>
+                      <section id="about">
+                        <Hero>
+                          <section className="relative c...">
+                            <motion.div>
+                            <motion.div>
+                            <motion.div>
+                            <div className="flex-1 tex...">
+                              <motion.h1>
++                             <div className="mt-6 text-xl text-gray-500">
+-                             <p className="mt-6 text-xl text-gray-500">
+                      ...
+            ...
+          ...
+
+[00:07:14.796] Server  LOG     ✓ Compiled in 154ms
+[00:07:47.888] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
