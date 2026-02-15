@@ -25,11 +25,11 @@ export default function Hero() {
         initial={{ opacity: 0, y: -6 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="hidden md:block absolute right-16 top-18 lg:top-24 z-40"
-        whileHover={{ scale: 1.04 }}
+        className="hidden md:block absolute right-12 top-1/2 -translate-y-1/2 z-40"
+        whileHover={{ scale: 1.05 }}
         aria-hidden
       >
-        <div className="w-48 h-48 rounded-full bg-white/70 p-1 drop-shadow-2xl ring-6 ring-pink-100/70 border border-white/40">
+        <div className="w-64 h-64 rounded-full bg-white/70 p-1 drop-shadow-2xl ring-8 ring-pink-100/70 border border-white/40">
           <div className="w-full h-full rounded-full overflow-hidden relative">
             <motion.img
               src="/profile.jpg"
@@ -53,6 +53,21 @@ export default function Hero() {
         >
           Hi, I'm <span className="text-pink-500">Okta</span>
         </motion.h1>
+
+        {/* mobile avatar: visible on small screens, hidden on md+ */}
+        <div className="md:hidden flex justify-center mb-6 mt-4">
+          <div className="w-36 h-36 rounded-full bg-white/70 p-1 drop-shadow-2xl ring-6 ring-pink-100/60 border border-white/30 overflow-hidden">
+            <motion.img
+              src="/profile.jpg"
+              alt="Okta mobile"
+              className="w-full h-full object-cover"
+              initial={{ opacity: 0, y: 10, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.7, ease: 'easeOut' }}
+              onError={(e: any) => { e.currentTarget.src = 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&q=80'; }}
+            />
+          </div>
+        </div>
 
         <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mt-6 flex justify-center md:justify-start">
           <div className="bg-white/70 backdrop-blur-md rounded-2xl p-6 md:p-8 max-w-3xl text-gray-600 text-base md:text-lg leading-relaxed space-y-3 shadow-lg border border-white/30">
