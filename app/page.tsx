@@ -20,9 +20,9 @@ export default function Home(){
           <div className="container mx-auto px-6">
             <h2 className="text-4xl font-black text-center mb-16 italic">What I've Made</h2>
             <div className="grid md:grid-cols-3 gap-8">
-              <ProjectCard title="RF-Nexus Bot" desc="Your friendly Discord assistant" icon={<Cloud size={40} className="text-soft-pink" />} color="bg-[#FFF0F3]" borderColor="border-soft-pink" />
-              <ProjectCard title="Project Starlight" desc="Automation and IoT Control" icon={<Rocket size={40} className="text-cyan-400" />} color="bg-[#E0F7FA]" borderColor="border-cyan-200" />
-              <ProjectCard title="Resep Nusantara" desc="Explore Indonesian tastes" icon={<Coffee size={40} className="text-purple-400" />} color="bg-[#F3E5F5]" borderColor="border-purple-200" />
+              <ProjectCard title="RF-Nexus Bot" desc="dev foroned" icon={<Cloud size={40} className="text-soft-pink" />} color="bg-[#FFF0F3]" borderColor="border-soft-pink" />
+              <ProjectCard title="Project Starlight" desc="Automation and IoT Control" logoSrc="/starlight-logo.svg" musicTone={{ sequence: [523, 659, 784, 1046], noteDuration: 220, type: 'sine' }} color="bg-[#E0F7FA]" borderColor="border-cyan-200" />
+              <ProjectCard title="Resep Nusantara" desc="Explore Indonesian tastes" icon={<Coffee size={40} className="text-purple-400" />} musicTone={{ sequence: [523, 659, 784, 1046], noteDuration: 220, type: 'sine' }} color="bg-[#F3E5F5]" borderColor="border-purple-200" />
             </div>
           </div>
         </section>

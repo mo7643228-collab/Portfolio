@@ -5,6 +5,11 @@
       --tw-translate-x: 0;
       --tw-translate-y: 0;
       --tw-translate-z: 0;
+      --tw-rotate-x: initial;
+      --tw-rotate-y: initial;
+      --tw-rotate-z: initial;
+      --tw-skew-x: initial;
+      --tw-skew-y: initial;
       --tw-space-y-reverse: 0;
       --tw-border-style: solid;
       --tw-gradient-position: initial;
@@ -67,7 +72,6 @@
     --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --color-cyan-200: #a2f4fd;
-    --color-cyan-400: #00d2ef;
     --color-purple-200: #e9d5ff;
     --color-purple-400: #c07eff;
     --color-pink-50: #fdf2f8;
@@ -122,7 +126,6 @@
   @supports (color: lab(0% 0 0)) {
     :root, :host {
       --color-cyan-200: lab(91.0821% -24.0435 -12.8306);
-      --color-cyan-400: lab(76.6045% -40.9406 -29.6231);
       --color-purple-200: lab(87.8405% 13.4282 -18.7159);
       --color-purple-400: lab(63.6946% 47.6127 -59.2066);
       --color-pink-50: lab(96.4459% 4.53997 -1.49434);
@@ -531,6 +534,10 @@
     display: none;
   }
 
+  .h-16 {
+    height: calc(var(--spacing) * 16);
+  }
+
   .h-24 {
     height: calc(var(--spacing) * 24);
   }
@@ -557,6 +564,10 @@
 
   .min-h-screen {
     min-height: 100vh;
+  }
+
+  .w-16 {
+    width: calc(var(--spacing) * 16);
   }
 
   .w-24 {
@@ -617,6 +628,10 @@
   .translate-y-0 {
     --tw-translate-y: calc(var(--spacing) * 0);
     translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+
+  .transform {
+    transform: var(--tw-rotate-x, ) var(--tw-rotate-y, ) var(--tw-rotate-z, ) var(--tw-skew-x, ) var(--tw-skew-y, );
   }
 
   .cursor-pointer {
@@ -872,6 +887,10 @@
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
 
+  .object-contain {
+    object-fit: contain;
+  }
+
   .object-cover {
     object-fit: cover;
   }
@@ -1007,10 +1026,6 @@
 
   .text-\[\#4A4A4A\] {
     color: #4a4a4a;
-  }
-
-  .text-cyan-400 {
-    color: var(--color-cyan-400);
   }
 
   .text-gray-400 {
@@ -1530,6 +1545,31 @@ body {
   syntax: "*";
   inherits: false;
   initial-value: 0;
+}
+
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false
 }
 
 @property --tw-space-y-reverse {
