@@ -36,8 +36,8 @@ export default function Home(){
                 <Send size={24} /> Kirim Pesan Ceria
               </motion.button>
 
-              <motion.a href="mailto:example@example.com" whileHover={{ scale: 1.1 }} className="bg-white border-4 border-pastel-pink text-soft-pink px-10 py-5 rounded-full font-black text-xl flex items-center gap-3"> 
-                <Mail size={24} /> rjl.fikri@gmail.com
+              <motion.a href="mailto:okta.siburian@gmail.com" whileHover={{ scale: 1.1 }} className="bg-white border-4 border-pastel-pink text-soft-pink px-10 py-5 rounded-full font-black text-xl flex items-center gap-3"> 
+                <Mail size={24} /> oktasiburian@gmail.com
               </motion.a>
             </div>
           </div>
